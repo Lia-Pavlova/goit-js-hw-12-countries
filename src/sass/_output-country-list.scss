@@ -1,0 +1,30 @@
+.countries-header {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+  padding: 0 20px;
+
+  color: blue;
+}
+
+.country {
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+.country:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.country-img {
+  display: block;
+  max-height: 100%;
+}
+.countries-name {
+  padding-left: 24px;
+}

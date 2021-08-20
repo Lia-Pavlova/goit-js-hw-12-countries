@@ -1,0 +1,25 @@
+.reset-btn {
+  margin-left: 20px;
+  padding: 6px 12px;
+
+  background-color: rgb(15, 96, 172);
+  color: white;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 rgba(255, 255, 255, 0.2) inset, 0 3px 5px rgba(0, 1, 6, 0.3),
+    0 0 1px 1px rgba(0, 1, 6, 0.1);
+  transition: 0.2s ease-in-out;
+}
+
+.reset-btn:focus,
+.reset-btn:hover {
+  cursor: pointer;
+  background-color: rgb(15, 121, 221);
+
+  &:active {
+    top: 1px;
+    left: 1px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset,
+      0 2px 3px rgba(0, 0, 0, 0.5) inset, 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+}

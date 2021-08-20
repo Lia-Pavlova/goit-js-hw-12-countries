@@ -1,0 +1,9 @@
+<p class='countries-header'>Found matches, please select a country from the list:</p>
+<ul class='country-list' data-value='country-list'>
+    {{#each this}}
+    <li class='country'>
+        <img class="country-img" src="{{flag}}" alt="Country flag" width="45" height="30">
+        <p class="countries-name countries_list__item">{{name}}</p>
+    </li>
+    {{/each}}
+</ul>
