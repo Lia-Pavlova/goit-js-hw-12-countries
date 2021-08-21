@@ -35,12 +35,11 @@
 }
 
 .input-field {
-  // display: block;
   padding: 10px 20px 10px 40px;
 
   border-radius: 30px;
   outline: none;
-  border: 1px solid #eee;
+  border: 2px solid #eee;
 
   font-size: 1.2rem;
 
@@ -50,7 +49,7 @@
 
   &:focus {
     border: 2px solid blue;
-    box-shadow: 0 0 10px 0 #5676cf;
+    box-shadow: 0 0 12px 0 #2e5ddb;
   }
 
   &::placeholder {

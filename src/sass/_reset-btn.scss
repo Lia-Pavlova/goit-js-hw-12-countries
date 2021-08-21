@@ -1,8 +1,8 @@
 .reset-btn {
-  margin-left: 20px;
+  margin-left: 10px;
   padding: 6px 12px;
 
-  background-color: rgb(15, 96, 172);
+  background-color: #2e5ddb;
   color: white;
   border-radius: 15px;
   border: none;
@@ -14,7 +14,7 @@
 .reset-btn:focus,
 .reset-btn:hover {
   cursor: pointer;
-  background-color: rgb(15, 121, 221);
+  background-color: #3465ec;
 
   &:active {
     top: 1px;

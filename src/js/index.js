@@ -16,7 +16,6 @@ import {
 import { addSeparatorySpaces } from './utils.js';
 
 
-
 const handleCountryData = data => {
   refs.outputLabel.classList.add('preloader-hidden');
   const queryFromCounryList = refs.output.querySelector('[data-query]');
@@ -71,9 +70,7 @@ const renderCountryList = data => {
 
   refs.output.innerHTML = countryListTemplate(data);
 
-  const countryInfoRef = refs.output.querySelector(
-    '[data-value="country-list"]',
-  );
+  const countryInfoRef = refs.output.querySelector('.country');
   countryInfoRef.addEventListener('click', onCountryClick);
 };
 
@@ -88,10 +85,11 @@ const onSearch = e => {
 };
 
 const onCountryClick = e => {
-  const targetCountry = e.target;
-  if (!targetCountry.classList.contains('country')) return;
-  targetCountry.dataset.query = '';
-  refs.input.dispatchEvent(new Event('input'));
+  const targetCountry = e.currentTarget;
+  const currentName = targetCountry.querySelector(".countries-name");
+  
+  refs.input.value = currentName.textContent;
+  refs.input.dispatchEvent(new Event("input"));
 };
 
 const refs = getRefs();
@@ -99,9 +97,9 @@ const refs = getRefs();
 refs.reset.addEventListener('click', onResetClick);
 function onResetClick(event) {
   event.preventDefault();
-  clearContent()
+  clearOutput();
   refs.input.value = ''
-  
+  refs.output.classList.add('empty');
 }
 
 refs.input.addEventListener('input', debounce(onSearch, 500));
@@ -109,6 +107,3 @@ refs.input.addEventListener('focus', e => e.target.select());
 
 clearOutput();
 
-function clearContent() {
-  refs.output.innerHTML = ''
-}
