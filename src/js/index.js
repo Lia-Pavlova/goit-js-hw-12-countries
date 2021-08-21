@@ -70,7 +70,7 @@ const renderCountryList = data => {
 
   refs.output.innerHTML = countryListTemplate(data);
 
-  const countryInfoRef = refs.output.querySelector('.country');
+  const countryInfoRef = refs.output.querySelector('.country-list');
   countryInfoRef.addEventListener('click', onCountryClick);
 };
 
@@ -85,10 +85,8 @@ const onSearch = e => {
 };
 
 const onCountryClick = e => {
-  const targetCountry = e.currentTarget;
-  const currentName = targetCountry.querySelector(".countries-name");
-  
-  refs.input.value = currentName.textContent;
+  const targetCountry = e.target;
+  refs.input.value = targetCountry.textContent;
   refs.input.dispatchEvent(new Event("input"));
 };
 
